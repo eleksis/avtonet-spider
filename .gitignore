@@ -1,0 +1,5 @@
+pyenv/
+db/
+.idea/
+*.pyc
+avtonetspider/secrets.py
