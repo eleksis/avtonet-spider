@@ -38,8 +38,9 @@ class AvtonetspiderPipeline(object):
             smtpssl=True
         )
         if len(self.new_cars) > 0:
+			links = '\n'.join(self.new_cars)
             mailer.send(
                 to=[spider.mail_to],
-                subject="New cars for you - " + str(len(self.new_cars)) + " - spider " + spider.name,
-                body='\n'.join(self.new_cars)
+                subject="New cars for you - " + str(len(self.new_cars)) + " - " + spider.name,
+                body=links + "----------------------------\n" + "All cars from this category: " + spider.start_urls[0]
             )

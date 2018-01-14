@@ -3,7 +3,7 @@ $ sudo apt-get install python-dev python-pip python-virtualenv
 
 How you get it working
 $ cd <project_dir>
-$ virtualenv -p pytho2 pyenv
+$ virtualenv -p python2 pyenv
 $ source pyenv/bin/activate
 $ pip install scrapy
 $ scrapy crawl <spider>
